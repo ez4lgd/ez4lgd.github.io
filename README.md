@@ -1,4 +1,4 @@
 # ez4lgd.github.io
-theme: THEME-NAME
+theme: minima
 
 some blogs
