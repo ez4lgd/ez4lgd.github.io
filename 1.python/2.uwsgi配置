@@ -1,0 +1,11 @@
+测试版本|更改内容|测试结果
+----:|------:|:-----
+#1|更改Djangosetting中的mysql格式，统一至utf8mb4|为解决mysql链接问题
+#2已经配置好了mysql更更改名称
+#3为使用uwsgi配置 3.8更改为pip3;3.9ini文件提到项目路径;3.10 wsgi-file改为module = Ai_Web.wsgi:application;11去掉app名，module = wsgi:application
+#3.92更改为wsgi.py，去掉Ai_Web;3.93回复wsgi.更改chdir;3.94 manage.py的Bert引用路径;3.95更改views引用路径;96延续94，将BertClass并入finetune
+#4解决了wsgi问题，原因在于路径配置与manage.py同级，不该为下级路径。
+#4.1面临3.9使用runserver不报错，uwsgi启动报错自定义模型类未在main函数中，需要测试哪个是main函数。，首先在wsgi.py中引入类;12在app/url引入；13在views中引入
+#4.2取消多线程多进程，views也改回来;21修改ini的注释；22将类写在类里面,重开多线程；23查看谁是main();24取消main，测试runserver
+#25将chdir设置到app;26删掉路径中的app路径Ai_Web;27路径改回24，Ai_Web的ini.py引入自定义model类;28向model_judge中引入model类
+#5.00 将这个自定义model类写到别的文件下，并导入。5.04引入类都找不到。
