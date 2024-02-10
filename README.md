@@ -1,3 +1,4 @@
 # ez4lgd.github.io
 
-some blogs
+1.python is some blogs
+2.internModel is exercise
